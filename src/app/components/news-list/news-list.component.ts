@@ -5,7 +5,7 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { NewsFormComponent } from '../news-form/news-form.component';
 import { MatDialog } from '@angular/material/dialog';
-
+import { MatIconModule } from '@angular/material/icon';
 interface News {
   id: number | string;
   title: string;
@@ -17,7 +17,7 @@ interface News {
   templateUrl: './news-list.component.html',
   styleUrl: './news-list.component.css',
   standalone: true,
-  imports: [CommonModule, MatTableModule, MatPaginatorModule],
+  imports: [CommonModule, MatTableModule, MatPaginatorModule, MatIconModule],
 })
 export class NewsListComponent implements OnInit {
   news = new MatTableDataSource<News>([]);
